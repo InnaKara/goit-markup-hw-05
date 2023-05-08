@@ -29,7 +29,9 @@
             >Web<span class="logo-part">Studio</span></a
           >
           <ul class="menu list">
-            <li><a class="menu-item link" href="./index.html">Studio</a></li>
+            <li>
+              <a class="menu-item active link" href="./index.html">Studio</a>
+            </li>
             <li>
               <a class="menu-item link" href="./portfolio.html">Portfolio</a>
             </li>
@@ -57,7 +59,9 @@
       <section class="hero">
         <div class="container">
           <h1 class="hero-caption">Effective Solutions for Your Business</h1>
-          <button class="btn-order" type="button">Order Service</button>
+          <button class="btn-order" type="button" data-modal-open>
+            Order Service
+          </button>
         </div>
       </section>
       <!-- Наші переваги -->
@@ -581,5 +585,17 @@
         </div>
       </div>
     </footer>
+
+    <!-- Modal window -->
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button class="modal-close-btn" data-modal-close>
+          <svg class="modal-close-icone" width="8" height="8">
+            <use href="./images/icons.svg#icon-close-button"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
