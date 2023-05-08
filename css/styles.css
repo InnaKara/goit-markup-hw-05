@@ -136,6 +136,9 @@ img {
   bottom: -1px;
   left: 0;
 }
+.active {
+  color: #404bbf;
+}
 .active::after {
   background-color: #404bbf;
 }
@@ -534,14 +537,14 @@ img {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translateX(-50%) translateY(-48%);
+  transform: translate(-50%, -50%) scale(1);
   width: 408px;
-  height: 584px;
+  min-height: 576px;
   background: #fcfcfc;
   border-radius: 4px;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
-  transition: opacity 400ms linear, transform 400ms linear;
+  transition: opacity var(--animation), transform var(--animation);
 }
 .backdrop.is-hidden .modal {
   opacity: 0;
@@ -561,9 +564,22 @@ img {
   align-items: center;
   justify-content: center;
   padding: 0;
+  cursor: pointer;
+  transition: background-color var(--animation), border var(--animation);
 }
+
+.modal-close-btn:hover,
+.modal-close-btn:focus {
+  background-color: #404bbf;
+  border: none;
+}
+
 .modal-close-icone {
   fill: rgba(46, 47, 66, 1);
+  transition: fill var(--animation);
+}
+.modal-close-icone:hover {
+  fill: rgba(255, 255, 255, 1);
 }
 
 /* Overlay */
