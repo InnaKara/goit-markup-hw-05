@@ -572,17 +572,17 @@ img {
 
 .modal-close-btn:hover,
 .modal-close-btn:focus {
-  fill: #ffffff;
   background-color: #404bbf;
   border: none;
 }
+/* fill var(--animation) */
 
 .modal-close-icone {
-  fill: rgba(46, 47, 66, 1);
   transition: fill var(--animation);
 }
-.modal-close-icone:hover {
-  fill: rgba(255, 255, 255, 1);
+.modal-close-btn:hover .modal-close-icone,
+.modal-close-btn:focus .modal-close-icone {
+  fill: #ffffff;
 }
 
 /* Overlay */
@@ -598,17 +598,14 @@ img {
   background-color: rgba(77, 90, 229, 1);
   width: 100%;
   height: 100%;
-  padding-top: 40px;
-  padding-right: 32px;
-  padding-bottom: 164px;
-  padding-left: 32px;
+  padding: 40px 32px;
   transform: translateY(100%);
   transition: transform var(--animation);
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #f4f4fd;
 }
-.examples-list-link:hover .overlay,
-.examples-list-link:focus .overlay {
+.more:hover .overlay,
+.more:focus .overlay {
   transform: translateY(0%);
 }
